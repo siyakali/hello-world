@@ -4,5 +4,15 @@ api_version: 1
 threadsafe: true
 
 handlers:
-- url: /.*
-  script: main.app
+
+#- url: /.*
+#  script: main.app
+
+- url: /
+  static_files: TaxCalculator.html
+  upload: TaxCalculator\.html
+
+
+- url: /page2
+  static_files: s.html
+  upload: s\.html
