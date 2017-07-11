@@ -12,11 +12,10 @@ handlers:
   static_files: TaxCalculator.html
   upload: TaxCalculator\.html
 
-
-- url: /.*
+- url: /TaxCalculator.css
   static_files: TaxCalculator.css
   upload: TaxCalculator\.css
 
-- url: /.*
+- url: /TaxCalculator.js
   static_files: TaxCalculator.js
   upload: TaxCalculator\.js
