@@ -12,10 +12,7 @@ handlers:
   static_files: TaxCalculator.html
   upload: TaxCalculator\.html
 
-- url: /TaxCalculator.css
-  static_files: TaxCalculator.css
-  upload: TaxCalculator\.css
+#CSS and JS are in folder named "Static". URL says go to that folder, and inside you will find the 
 
-- url: /TaxCalculator.js
-  static_files: TaxCalculator.js
-  upload: TaxCalculator\.js
+- url: /static
+  static_dir: static
