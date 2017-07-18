@@ -36,11 +36,38 @@ th{
 
 td{
     padding-left: 30px;
-    width: 65%;
+    width: 32.4%;
+}
+
+td.includeData {
+    padding-left: 0;
+}
+
+td.resultsRow {
+    text-align: right;
+    padding-left: 0;
+}
+
+label {
+    display: inline;
 }
 
 input{
+    display: inline-block;
     padding: 5px;
-    width: 40%;
+    width: 90%;
     font-size: 14px;
+}
+
+#bonusIncludedBox, #travelAllowanceIncludedBox, #under65Box, #between65and75Box, #over75Box {
+    width: 12px;
+}
+
+.age {
+    padding-right: 3%;
+}
+
+#calculateTaxButton{
+    width: 95%;
+    padding: 0;
 }
