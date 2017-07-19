@@ -59,7 +59,7 @@ input{
     font-size: 14px;
 }
 
-#bonusIncludedBox, #travelAllowanceIncludedBox, #under65Box, #between65and75Box, #over75Box {
+#bonusIncludedBox, #travelRebateIncludedBox, #under65Box, #between65and75Box, #over75Box {
     width: 12px;
 }
 
