@@ -1,0 +1,73 @@
+body{
+    margin: 0;
+}
+
+div#wrap{
+    position: relative;
+    max-width: 100%;
+    font-family: helvetica;
+}
+
+#calculatorTable{
+    width: 70%;
+    font-size: 18px;
+    margin: 0 auto;
+    border-collapse: collapse;
+    background-color: #e7e9ee;
+}
+
+tr{
+    height: 40px;
+    border-bottom: 1px solid grey;
+}
+
+th.head, .subHead{
+    text-align: center;
+}
+
+th{
+    width: 35%;
+    text-align: right;
+}
+
+.subHead{
+    background-color: #93949a;
+}
+
+td{
+    padding-left: 30px;
+    width: 32.4%;
+}
+
+td.includeData {
+    padding-left: 0;
+}
+
+td.resultsRow {
+    text-align: right;
+    padding-left: 0;
+}
+
+label {
+    display: inline;
+}
+
+input{
+    display: inline-block;
+    padding: 5px;
+    width: 90%;
+    font-size: 14px;
+}
+
+#bonusIncludedBox, #travelRebateIncludedBox, #under65Box, #between65and75Box, #over75Box {
+    width: 12px;
+}
+
+.age {
+    padding-right: 3%;
+}
+
+#calculateTaxButton{
+    width: 95%;
+    padding: 0;
+}

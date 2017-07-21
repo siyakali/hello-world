@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="static/TaxCalculator.css" />
+        <meta charset="utf-8">
+        <title>Income Tax Calculator</title>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="content">
+                <table id="calculatorTable">
+                    <thead>
+                        <th colspan="3" scope="col" class="head">Tax Calculator</th>
+                    </thead>
+                    <tbody>
+                        <th colspan="3" scope="col" class="subHead">Information</th>
+                        <tr>
+                            <th>Age Group</th>
+                            <td colspan="2">
+                                <input class"radioForAge" id="under65Box" type="radio" name="Included"/>
+                                <label class="age" for="">Under 65</label>
+
+                                <input class"radioForAge" id="between65and75Box" type="radio" name="Included"/>
+                                <label class="age" for="">Between 65 and 75</label>
+
+                                <input class"radioForAge" id="over75Box" type="radio" name="Included"/>
+                                <label class="age" for="">75 and older</label>
+
+                            </td>
+                        </tr>
+                        <th colspan="3" scope="col" class="subHead">Income</th>
+                        <tr>
+                            <th>Salary</th>
+                            <td>
+                                <input class"input" id="salary" type="number" placeholder="Salary"/>
+                            </td>
+                            <td class="resultsRow"></td>
+                        </tr>
+                        <tr>
+                            <th>Bonus</th>
+                            <td>
+                                <input class"input" id="bonus" type="number" placeholder="Bonus"/>
+                            </td>
+                            <td class="includeData">
+                                <label for="">Included</label>
+                                <input class"checkbox" id="bonusIncludedBox" type="checkbox" name="Included"/>
+                            </td>
+                        </tr>
+
+                        <th colspan="3" scope="col" class="subHead">Deductions</th>
+                        <tr>
+                            <th>Pension</th>
+                            <td>
+                                <input class"input" id="pension" type="number" placeholder="Pension"/>
+                            </td>
+                            <td class="resultsRow"></td>
+                        </tr>
+                        <tr>
+                            <th>Annuity</th>
+                            <td>
+                                <input class"input" id="annuity" type="number" placeholder="Annuity"/>
+                            </td>
+                            <td class="resultsRow"></td>
+                        </tr>
+                        <th colspan="3" scope="col" class="subHead">Rebates</th>
+                        <tr>
+                            <th>Travel Rebate</th>
+                            <td>
+                                <input class"input" id="travelRebate" type="number" placeholder="Travel Rebate"/>
+                            </td>
+                            <td class="includeData">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th></th>
+                            <td>
+                                <input id="calculateTaxButton" type="button" value="Calculate Tax"/>
+                            </td>
+                        </tr>
+                        <th colspan="3" scope="col" class="subHead">Results</th>
+                        <tr>
+                            <th>Total Tax</th>
+                            <td class="resultsRow" id="totalTax"><span id="totalTaxResult"></span>
+                            </td>
+                            <td class="resultsRow"></td>
+                        </tr>
+                        <tr>
+                            <th>Tax On Basic</th>
+                            <td class="resultsRow" id="taxOnBasic"><span id="taxOnBasicResult"></span>
+                            </td>
+                            <td class="resultsRow"></td>
+                        </tr>
+                        <tr>
+                            <th>Tax On Bonus</th>
+                            <td class="resultsRow" id="taxOnBonus"><span id="taxOnBonusResult"></span>
+                            </td>
+                            <td class="resultsRow"></td>
+                        </tr>
+                        <tr>
+                            <th>Take home pay</th>
+                            <td class="resultsRow" id="takeHomePay"><span id="takeHomePayResult"></span>
+                            </td>
+                            <td class="resultsRow"></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+
+            </div>
+
+        </div>
+
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script type="text/javascript" src="static/TaxCalculator.js"></script>
+    </body>
+</html>
