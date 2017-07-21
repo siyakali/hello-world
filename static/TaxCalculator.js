@@ -4,7 +4,7 @@ $(window).on("load", function() {
 
     document.getElementById('under65Box').checked = true;
     document.getElementById('salary').defaultValue = 50000;
-    document.getElementById('bonus').defaultValue = 0;
+    document.getElementById('bonus').defaultValue = 100;
     document.getElementById('travelRebate').defaultValue = 0;
     document.getElementById('pension').defaultValue = 500;
     document.getElementById('annuity').defaultValue = 0;
@@ -74,9 +74,9 @@ $(window).on("load", function() {
             if (net < 0) {
                 return "Please enter a positve value as salary cannot be negative";
             } else if (net <= 117300) {
-                return "You are not eligible for taxation";
+                return 0;
             } else if (net <= 189880) {
-                return (net - 75750) * 18 / 100;
+                return (net - 117300) * 18 / 100;
             } else if (net <= 296540) {
                 return (net - 189880) * 26 / 100 + 34178 - 21114;
             } else if (net <= 410460) {
@@ -100,9 +100,9 @@ $(window).on("load", function() {
             if (net < 0) {
                 return "Please enter a positve value as salary cannot be negative";
             } else if (net <= 131150) {
-                return "You are not eligible for taxation";
+                return 0;
             } else if (net <= 189880) {
-                return (net - 75750) * 18 / 100;
+                return (net - 131150) * 18 / 100;
             } else if (net <= 296540) {
                 return (net - 189880) * 26 / 100 + 34178 - 23607;
             } else if (net <= 410460) {
@@ -126,7 +126,7 @@ $(window).on("load", function() {
             if (net < 0) {
                 return "Please enter a positve value as salary cannot be negative";
             } else if (net <= 75750) {
-                return "You are not eligible for taxation";
+                return 0;
             } else if (net <= 189880) {
                 return (net - 75750) * 18 / 100;
             } else if (net <= 296540) {
@@ -160,9 +160,9 @@ $(window).on("load", function() {
             if (salaryBonus < 0) {
                 return "Please enter a positve value as salary cannot be negative";
             } else if (salaryBonus <= 117300) {
-                return "You are not eligible for taxation";
+                return 0;
             } else if (salaryBonus <= 189880) {
-                return (salaryBonus - 75750) * 18 / 100;
+                return (salaryBonus - 117300) * 18 / 100;
             } else if (salaryBonus <= 296540) {
                 return (salaryBonus - 189880) * 26 / 100 + 34178 - 21114;
             } else if (salaryBonus <= 410460) {
@@ -186,9 +186,9 @@ $(window).on("load", function() {
             if (salaryBonus < 0) {
                 return "Please enter a positve value as salary cannot be negative";
             } else if (salaryBonus <= 131150) {
-                return "You are not eligible for taxation";
+                return 0;
             } else if (salaryBonus <= 189880) {
-                return (salaryBonus - 75750) * 18 / 100;
+                return (salaryBonus - 131150) * 18 / 100;
             } else if (salaryBonus <= 296540) {
                 return (salaryBonus - 189880) * 26 / 100 + 34178 - 23607;
             } else if (salaryBonus <= 410460) {
@@ -212,7 +212,7 @@ $(window).on("load", function() {
             if (salaryBonus < 0) {
                 return "Please enter a positve value as salary cannot be negative";
             } else if (salaryBonus <= 75750) {
-                return "You are not eligible for taxation";
+                return 0;
             } else if (salaryBonus <= 189880) {
                 return (salaryBonus - 75750) * 18 / 100;
             } else if (salaryBonus <= 296540) {
@@ -238,10 +238,6 @@ $(window).on("load", function() {
 
         console.log("tax on salary with bonus = " + calculateTaxOnSalaryWithBonus());
 
-        if (getBonus() === 0) {
-            return "You do not have a taxable bonus amount"
-        }
-
         return calculateTaxOnSalaryWithBonus() - calculateTaxOnSalary();
     };
 
@@ -254,7 +250,7 @@ $(window).on("load", function() {
             return calculateTaxOnSalary() - getTravelRebate();
         } else if (getTravelRebate() === 0) {
             return calculateTaxOnSalary() + calculateTaxOnBonus();
-        } 
+        }
 
         return calculateTaxOnSalary() + calculateTaxOnBonus() - getTravelRebate();
 
@@ -262,10 +258,6 @@ $(window).on("load", function() {
 
     // Function to calculate take home pay
     var calculateTakeHomePay = function(){
-
-        if (getBonus() === 0 || calculateTotalTax() === 0) {
-            return salaryNet();
-        }
 
         return salaryNet() + getBonus() - calculateTotalTax();
 
