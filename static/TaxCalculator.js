@@ -4,7 +4,7 @@ $(window).on("load", function() {
 
     document.getElementById('under65Box').checked = true;
     document.getElementById('salary').defaultValue = 50000;
-    document.getElementById('bonus').defaultValue = 100;
+    document.getElementById('bonus').defaultValue = 0;
     document.getElementById('travelRebate').defaultValue = 0;
     document.getElementById('pension').defaultValue = 500;
     document.getElementById('annuity').defaultValue = 0;
